@@ -7,7 +7,7 @@ import {loadUsers} from './seedData';
 import usersRouter from './api/users';
 import genresRouter from './api/genres';
 import session from 'express-session';
-import authenticate from './authenticate';
+import passport from './authenticate';
 
 dotenv.config();
 
@@ -22,6 +22,7 @@ const errHandler = (err, req, res, next) => {
   res.status(500).send(`Hey!! You caught the error 👍👍, ${err.stack} `);
 };
 
+
 if (process.env.SEED_DB) {
   loadUsers();
 }
@@ -31,6 +32,7 @@ const app = express();
 
 const port = process.env.PORT;
 
+
 //session middleware
 app.use(session({
   secret: 'ilikecake',
@@ -38,12 +40,14 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(passport.initialize());
+
 app.use(express.static('public'));
 //configure body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-//update /api/Movie route
-app.use('/api/movies', authenticate, moviesRouter);
+
+app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/genres', genresRouter);
 app.use(errHandler);
