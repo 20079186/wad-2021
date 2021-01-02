@@ -20,6 +20,7 @@ router.post('/', async (req, res, next) => {
     });
   }
   if (req.query.action === 'register') {
+    const passwordReg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
     await User.create(req.body).catch(next);
     res.status(201).json({
       code: 201,
@@ -60,13 +61,26 @@ router.put('/:id',  (req, res) => {
 
 //Add a favourite. No Error Handling Yet. Can add duplicates too!
 router.post('/:userName/favourites', async (req, res, next) => {
+  try {
   const newFavourite = req.body.id;
   const userName = req.params.userName;
   const movie = await movieModel.findByMovieDBId(newFavourite);
   const user = await User.findByUserName(userName);
+  if (user.favourites.indexOf(movie._id)){
   await user.favourites.push(movie._id);
   await user.save(); 
-  res.status(201).json(user); 
+  res.status(201).json(user);
+
+} 
+  else {
+    res.status(401).json({
+      code: 401,
+      msg: 'You have added this already, pick another'
+    });
+  }
+} catch (err) {
+  console.error(`failed: ${err}`);
+}
 });
 
 router.get('/:userName/favourites', (req, res, next) => {
