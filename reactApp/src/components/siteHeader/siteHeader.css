@@ -1,0 +1,13 @@
+.fixed-top {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar{
+    color:light;
+    background-color:cornflowerblue ;
+    position: fixed-top;
+}
+
+.navbar-brand{
+    color: darkslateblue;
+}

@@ -1,0 +1,10 @@
+img.movie {
+    float: left;
+    width: 100%;
+    height: 25rem;
+  }
+
+  movie.title {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  }
