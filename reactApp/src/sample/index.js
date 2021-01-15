@@ -6,7 +6,7 @@ import LoginPage from "../api/pages/loginPage";
 import SignUpPage from "../api/pages/signUpPage";
 import PrivateRoute from "./privateRoute";
 import AuthHeader from "./authHeader";
-import AuthProvider from "./authContext";
+import AuthProvider from "../contexts/authContext";
 import MovieProvider from "./moviesContext";
 
 const App = () => {

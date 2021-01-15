@@ -4,6 +4,7 @@ import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing, getTran
 
 
 
+
 export const MoviesContext = createContext(null);
 
 const reducer = (state, action) => {

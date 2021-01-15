@@ -18,7 +18,15 @@ import WatchListPage from './pages/watchListPage';
 import PopularMoviesPage from './pages/popularMoviesPage'
 import NowPlayingPage from './pages/nowPlayingPage';
 import MovieCreditsPage from './pages/movieCreditsPage';
-import LatestMoviePage from "./pages/latestMovie";
+import LatestMoviePage from "./pages/LatestMoviePage";
+import AuthProvider from "./authContext";
+import { PublicPage, Movies, Profile, } from "./pages";
+import LoginPage from "../api/pages/loginPage";
+import SignUpPage from "../api/pages/signUpPage";
+import PrivateRoute from "./privateRoute";
+import AuthHeader from "./authHeader";
+
+import MovieProvider from "./moviesContext";
 
 
 
@@ -42,7 +50,13 @@ const App = () => {
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
         <Route path="/credits/:id" component={MovieCreditsPage} />
         <Route path="/reviews/:id" component={MovieReviewPage} />
-        
+        <Route path="/public" component={PublicPage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/signup" component={SignUpPage} />,
+          <Route exact path="/" component={HomePage} />
+          <PrivateRoute path="/movies" component={Movies} />
+          <PrivateRoute path="/profile" component={Profile} />
+         
         <Route path="/movies/:id" component={MoviePage} />
         <Route path="/" component={HomePage} />
         <Redirect from="*" to="/" />

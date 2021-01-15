@@ -5,6 +5,10 @@ import popularMovieModel from '../api/popularMovies/popularMoviesModel';
 import upcomingMovieModel from '../api/upcomingMovies/upcomingMoviesModel';
 import nowPlayingMovieModel from '../api/nowPlayingMovies/nowPlayingMoviesModel';
 import {movies} from './movies.js';
+import {upcoming} from './upcomingMovies';
+import {nowPlaying} from './nowPlayingMovies';
+import {latest} from './latestMovie';
+import {popular} from './popularMovies';
 
 const users = [
   {

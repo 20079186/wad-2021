@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Redirect } from "react-router-dom";
-import { AuthContext } from '../../sample/authContext';
+import { AuthContext } from '../../contexts/authContext';
 
 const SignUpPage = props => {
   const context = useContext(AuthContext)

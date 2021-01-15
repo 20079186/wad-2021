@@ -31,7 +31,7 @@ const UpcomingSchema = new Schema({
   tagline: { type: String }
 });
 
-MovieSchema.statics.findByMovieDBId = function (id) {
+UpcomingSchema.statics.findByMovieDBId = function (id) {
   return this.findOne({ id: id });
 };
 
