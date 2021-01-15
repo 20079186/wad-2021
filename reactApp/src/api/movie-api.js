@@ -42,7 +42,7 @@ export const getMovies = () => {
     }
     ).then(res => res.json());
   };
-  export const getNowPlayingMovies = () => {
+  export const getNow_Playing = () => {
     return fetch(
        '/api/nowPlayingMovies',{headers: {
          'Authorization': window.localStorage.getItem('token')
@@ -53,6 +53,15 @@ export const getMovies = () => {
   export const getLatestMovie = () => {
     return fetch(
        '/api/latestMovie',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+  };
+
+  export const getGenres = () => {
+    return fetch(
+       '/api/genres',{headers: {
          'Authorization': window.localStorage.getItem('token')
       }
     }

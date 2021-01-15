@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { useContext} from 'react';
-import { MoviesContext } from './moviesContext';
 
 
 
-
- export const Profile = () => {
+export const ProfilePage = () => {
     return <h2>My Profile </h2>
  }
+
+ 
+
+ export default ProfilePage;

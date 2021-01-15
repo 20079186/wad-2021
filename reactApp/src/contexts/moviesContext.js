@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useReducer } from "react";
-import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing, getTranslations, getLatestMovie} from "../api/tmdb-api";
+import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing, getLatestMovie} from "../api/movie-api";
 
 
 
@@ -53,16 +53,6 @@ const reducer = (state, action) => {
     case "load-latest":
         return {latest: action.payload.movies, movies: [...state.movies], upcoming: [...state.upcoming], popular: [...state.popular], now_playing: [...state.now_playing] };
 
-
-    case "see-translations":
-      return {
-        now_playing: state.now_playing.map ((m) =>
-        m.id === action.payload.movie.id ? { ...m, translations: true } : m
-        ),
-      
-        movies: [...state.movies],
-        
-      };
 
       case "add-watchListUpcoming":
         return {
@@ -142,10 +132,7 @@ const MoviesContextProvider = (props) => {
   };
 
 
-  const seeTranslations = (movieId) => {
-    const index = state.translations.map((m) => m.id).indexOf(movieId);
-    dispatch({ type: "see-translations", payload: { movie: state.translations[index] } });
-  };
+ 
 
 
 
@@ -185,12 +172,7 @@ const MoviesContextProvider = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    getTranslations().then((movies) => {
-      dispatch({ type: "load-translations", payload: { movies } });
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
 
 
   return (
@@ -200,14 +182,14 @@ const MoviesContextProvider = (props) => {
         upcoming: state.upcoming,
         popular: state.popular,
         now_playing: state.now_playing,
-        translations: state.translations,
+        
         
         addHomeToFavorites: addHomeToFavorites,
         addPopularToFavorites: addPopularToFavorites,
         addUpcomingToWatchList: addUpcomingToWatchList,
         addNowPlayingToWatchList: addNowPlayingToWatchList,
         addReview: addReview,
-        seeTranslations: seeTranslations,
+        
       }}
     >
       {props.children}

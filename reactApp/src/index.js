@@ -1,4 +1,4 @@
-import './sample/';
+
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -18,15 +18,14 @@ import WatchListPage from './pages/watchListPage';
 import PopularMoviesPage from './pages/popularMoviesPage'
 import NowPlayingPage from './pages/nowPlayingPage';
 import MovieCreditsPage from './pages/movieCreditsPage';
-import LatestMoviePage from "./pages/LatestMoviePage";
-import AuthProvider from "./authContext";
-import { PublicPage, Movies, Profile, } from "./pages";
-import LoginPage from "../api/pages/loginPage";
-import SignUpPage from "../api/pages/signUpPage";
+import LatestMoviePage from "./pages/latestMoviePage";
+import AuthProvider from "./contexts/authContext";
+import LoginPage from "../pages/loginPage";
+import SignUpPage from "../pages/signUpPage";
 import PrivateRoute from "./privateRoute";
-import AuthHeader from "./authHeader";
+import AuthHeader from "./components/authHeader";
+import ProfilePage from "./pages/profilePage";
 
-import MovieProvider from "./moviesContext";
 
 
 
@@ -46,16 +45,17 @@ const App = () => {
         <Route exact path="/movies/watchList" component={WatchListPage} />
         <Route exact path="/movies/popular" component={PopularMoviesPage} />
         <Route exact path="/movies/nowPlaying" component={NowPlayingPage} />
-        <Route exact path="movies/latest" component={LatestMoviePage}/>
+        <Route exact path="/movies/latest" component={LatestMoviePage}/>
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
         <Route path="/credits/:id" component={MovieCreditsPage} />
         <Route path="/reviews/:id" component={MovieReviewPage} />
-        <Route path="/public" component={PublicPage} />
+        
+        
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignUpPage} />,
           <Route exact path="/" component={HomePage} />
-          <PrivateRoute path="/movies" component={Movies} />
-          <PrivateRoute path="/profile" component={Profile} />
+          
+          <PrivateRoute path="/profile" component={ProfilePage} />
          
         <Route path="/movies/:id" component={MoviePage} />
         <Route path="/" component={HomePage} />
