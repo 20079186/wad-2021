@@ -20,10 +20,10 @@ import NowPlayingPage from './pages/nowPlayingPage';
 import MovieCreditsPage from './pages/movieCreditsPage';
 import LatestMoviePage from "./pages/latestMoviePage";
 import AuthProvider from "./contexts/authContext";
-import LoginPage from "../pages/loginPage";
-import SignUpPage from "../pages/signUpPage";
-import PrivateRoute from "./privateRoute";
-import AuthHeader from "./components/authHeader";
+import LoginPage from "./pages/loginPage";
+import SignUpPage from "./pages/signUpPage";
+import PrivateRoute from "./sample/privateRoute";
+import AuthHeader from "./authHeader";
 import ProfilePage from "./pages/profilePage";
 
 
