@@ -1,6 +1,7 @@
 import React, { useEffect, createContext, useReducer } from "react";
 import { useState } from "react/cjs/react.development";
 import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing} from "../api/movie-api";
+import { AuthContext } from '../contexts/authContext';
 
 
 
@@ -145,6 +146,7 @@ const MoviesContextProvider = (props) => {
   
   useEffect(() => {
     getUpcomingMovies().then((movies) => {
+      console.log(movies);
       dispatch({ type: "load-upcoming", payload: { movies } });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps

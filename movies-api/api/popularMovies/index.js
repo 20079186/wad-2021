@@ -5,7 +5,7 @@ import popularMoviesModel from '../movies/movieModel';
 
 const router = express.Router();
 
-router.get('/popular', (req, res, next) => {
+router.get('/popularMovies', (req, res, next) => {
     popularMoviesModel.find().then(popular => res.status(200).send([popular])).catch(next);
   });
 

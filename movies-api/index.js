@@ -56,13 +56,13 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
-app.use('/api/movies', moviesRouter);
-app.use('/api/movies/:id', moviesRouter);
+app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
+app.use('/api/movies/:id', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/genres', genresRouter);
 app.use('/api/nowPlayingMovies',  passport.authenticate('jwt', {session: false}), nowPlayingRouter);
 app.use('/api/popularMovies',  passport.authenticate('jwt', {session: false}), popularRouter);
-app.use('/api/upcoming', passport.authenticate('jwt', {session: false}), upcomingRouter);
+app.use('/api/upcomingMovies', passport.authenticate('jwt', {session: false}), upcomingRouter);
 
 app.use(errHandler);
 app.listen(port, () => {

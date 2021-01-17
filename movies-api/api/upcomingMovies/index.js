@@ -1,11 +1,11 @@
 import express from 'express';
 import { upcoming } from '../../seedData/upcomingMovies';
 import {getMovieReviews} from '../tmdb-api';
-import upcomingMoviesModel from '../upcomingMovies/upcomingMoviesModel';
+import upcomingMoviesModel from './upcomingMoviesModel';
 
 const router = express.Router();
 
-router.get('/upcoming', (req, res, next) => {
+router.get('/upcomingMovies', (req, res, next) => {
     upcomingMoviesModel.find().then(upcoming => res.status(200).send(upcoming)).catch(next);
   });
 

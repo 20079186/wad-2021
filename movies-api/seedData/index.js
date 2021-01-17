@@ -3,11 +3,11 @@ import movieModel from '../api/movies/movieModel';
 import popularMovieModel from '../api/popularMovies/popularMoviesModel';
 import upcomingMovieModel from '../api/upcomingMovies/upcomingMoviesModel';
 import nowPlayingMovieModel from '../api/nowPlayingMovies/nowPlayingMoviesModel';
-import {movies} from './movies';
-import {upcoming} from './upcomingMovies';
-import {nowPlaying} from './nowPlayingMovies';
-import {popular} from './popularMovies';
-import {genres} from './genres';
+import {movies} from './movies.js';
+import {upcoming} from './upcomingMovies.js';
+import {nowPlaying} from './nowPlayingMovies.js';
+import {popular} from './popularMovies.js';
+import {genres} from './genres.js';
 
 const users = [
   {
