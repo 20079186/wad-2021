@@ -58,14 +58,6 @@ export const getMovies = () => {
     }
     ).then(res => res.json());
   };
-  export const getLatestMovie = () => {
-    return fetch(
-       '/api/latest',{headers: {
-         'Authorization': window.localStorage.getItem('token')
-      }
-    }
-    ).then(res => res.json());
-  };
 
   export const getGenres = () => {
     return fetch(

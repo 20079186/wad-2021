@@ -1,15 +1,12 @@
 import express from 'express';
-import {getGenres } from '../tmdb-api';
+import { genres } from '../../seedData/genres';
+import genresModel from './genresModel';
 
 const router = express.Router();
 
-router.get('/genres', (req, res,next) => {
-    getGenres()
-    .then(genres => res.status(200).send(genres))
-    .catch((error) => next(error));
+  router.get('/genres', (req, res, next) => {
+    genresModel.find().then(genres => res.status(200).send([genres])).catch(next);
   });
-
-
 
   export default router;
 
