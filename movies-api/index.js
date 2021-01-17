@@ -3,7 +3,7 @@ import express from 'express';
 import moviesRouter from './api/movies';
 import bodyParser from 'body-parser';
 import './db';
-import {loadUsers, loadMovies} from './seedData';
+import {loadUsers, loadMovies, loadLatestMovie, loadPopularMovies, loadUpcomingMovies, loadNowPlayingMovies} from './seedData';
 import usersRouter from './api/users';
 import genresRouter from './api/genres';
 import session from 'express-session';
@@ -27,6 +27,11 @@ const errHandler = (err, req, res, next) => {
 if (process.env.SEED_DB) {
   loadUsers();
   loadMovies();
+  loadGenres();
+  loadLatestMovie();
+  loadNowPlayingMovies();
+  loadPopularMovies();
+  loadUpcomingMovies();
 }
 
 
@@ -52,6 +57,11 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/genres', genresRouter);
+app.use('/api/latestMovie', latestRouter);
+app.use('/api/nowPlayingMovies', nowPlayingRouter);
+app.use('/api/popularMovies', popularRouter);
+app.use('/api/upcoming', upcomingRouter);
+
 app.use(errHandler);
 app.listen(port, () => {
   console.info(`Server running at ${port}`);

@@ -36,7 +36,7 @@ export const getMovies = () => {
   };
   export const getUpcomingMovies = () => {
     return fetch(
-       '/api/upcomingMovies',{headers: {
+       '/api/upcoming',{headers: {
          'Authorization': window.localStorage.getItem('token')
       }
     }
@@ -44,7 +44,7 @@ export const getMovies = () => {
   };
   export const getPopularMovies = () => {
     return fetch(
-       '/api/popularMovies',{headers: {
+       '/api/popular',{headers: {
          'Authorization': window.localStorage.getItem('token')
       }
     }
@@ -52,7 +52,7 @@ export const getMovies = () => {
   };
   export const getNow_Playing = () => {
     return fetch(
-       '/api/nowPlayingMovies',{headers: {
+       '/api/nowPlaying',{headers: {
          'Authorization': window.localStorage.getItem('token')
       }
     }
@@ -60,7 +60,7 @@ export const getMovies = () => {
   };
   export const getLatestMovie = () => {
     return fetch(
-       '/api/latestMovie',{headers: {
+       '/api/latest',{headers: {
          'Authorization': window.localStorage.getItem('token')
       }
     }
