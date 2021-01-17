@@ -3,7 +3,7 @@ import express from 'express';
 import moviesRouter from './api/movies';
 import bodyParser from 'body-parser';
 import './db';
-import {loadUsers, loadMovies, loadLatestMovie, loadPopularMovies, loadUpcomingMovies, loadNowPlayingMovies} from './seedData';
+import {loadUsers, loadMovies, loadLatestMovie, loadPopularMovies, loadUpcomingMovies, loadNowPlayingMovies, loadGenres} from './seedData';
 import usersRouter from './api/users';
 import genresRouter from './api/genres';
 import session from 'express-session';
@@ -57,10 +57,10 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/genres', genresRouter);
-app.use('/api/latestMovie', latestRouter);
-app.use('/api/nowPlayingMovies', nowPlayingRouter);
-app.use('/api/popularMovies', popularRouter);
-app.use('/api/upcoming', upcomingRouter);
+app.use('/api/latestMovie', moviesRouter);
+app.use('/api/nowPlayingMovies', moviesRouter);
+app.use('/api/popularMovies', moviesRouter);
+app.use('/api/upcoming', moviesRouter);
 
 app.use(errHandler);
 app.listen(port, () => {

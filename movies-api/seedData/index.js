@@ -9,6 +9,7 @@ import {upcoming} from './upcomingMovies';
 import {nowPlaying} from './nowPlayingMovies';
 import {latest} from './latestMovie';
 import {popular} from './popularMovies';
+import {genres} from './genres';
 
 const users = [
   {
@@ -43,6 +44,17 @@ export async function loadUsers() {
       console.error(`failed to Load movie Data: ${err}`);
     }
   }
+  export async function loadGenres() {
+    console.log('load seed data');
+    console.log(genres.length);
+    try {
+      await genresModel.deleteMany();
+      await genresModel.collection.insertMany(genres);
+      console.info(`${genres.length} Genres were successfully stored.`);
+    } catch (err) {
+      console.error(`failed to Load genre Data: ${err}`);
+    }
+  }
 
   export async function loadUpcomingMovies() {
     console.log('load seed data');
@@ -50,7 +62,7 @@ export async function loadUsers() {
     try {
       await upcomingMovieModel.deleteMany();
       await upcomingMovieModel.collection.insertMany(upcoming);
-      console.info(`${upcoming.length} Movies were successfully stored.`);
+      console.info(`${upcoming.length} Upcoming movies were successfully stored.`);
     } catch (err) {
       console.error(`failed to Load movie Data: ${err}`);
     }
@@ -61,7 +73,7 @@ export async function loadUsers() {
     try {
       await nowPlayingMovieModel.deleteMany();
       await nowPlayingMovieModel.collection.insertMany(nowPlaying);
-      console.info(`${nowPlaying.length} Movies were successfully stored.`);
+      console.info(`${nowPlaying.length} Now Playing movies were successfully stored.`);
     } catch (err) {
       console.error(`failed to Load movie Data: ${err}`);
     }
@@ -72,7 +84,7 @@ export async function loadUsers() {
     try {
       await popularMovieModel.deleteMany();
       await popularMovieModel.collection.insertMany(upcoming);
-      console.info(`${popular.length} Movies were successfully stored.`);
+      console.info(`${popular.length} Popular movies were successfully stored.`);
     } catch (err) {
       console.error(`failed to Load movie Data: ${err}`);
     }
@@ -83,7 +95,7 @@ export async function loadUsers() {
     try {
       await latestMovieModel.deleteMany();
       await latestMovieModel.collection.insertMany(upcoming);
-      console.info(`${latest.length} Movies were successfully stored.`);
+      console.info(`${latest.length} Latest movie was successfully stored.`);
     } catch (err) {
       console.error(`failed to Load movie Data: ${err}`);
     }
