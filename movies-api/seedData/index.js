@@ -87,14 +87,4 @@ export async function loadUsers() {
       console.error(`failed to Load movie Data: ${err}`);
     }
   }
-  export async function loadLatestMovie() {
-    console.log('load seed data');
-    console.log(latest.length);
-    try {
-      await latestMovieModel.deleteMany();
-      await latestMovieModel.collection.insertMany(upcoming);
-      console.info(`${latest.length} Latest movie was successfully stored.`);
-    } catch (err) {
-      console.error(`failed to Load movie Data: ${err}`);
-    }
-  }
+ 

@@ -17,6 +17,7 @@ export const signup = (username, password) => {
         body: JSON.stringify({ username: username, password: password })
     }).then(res => res.json())
 };
+
 export const getMovie= () => {
   return fetch(
      '/api/movie',{headers: {
@@ -27,13 +28,14 @@ export const getMovie= () => {
 };
 
 export const getMovies = () => {
-    return fetch(
-       '/api/movies',{headers: {
-         'Authorization': window.localStorage.getItem('token')
-      }
+  return fetch(
+     '/api/movies',{headers: {
+       'Authorization': window.localStorage.getItem('token')
     }
-    ).then(res => res.json());
-  };
+  }
+  ).then(res => res.json());
+};
+
   export const getUpcomingMovies = () => {
     return fetch(
        '/api/upcoming',{headers: {
