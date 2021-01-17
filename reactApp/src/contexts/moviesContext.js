@@ -1,6 +1,6 @@
 import React, { useEffect, createContext, useReducer } from "react";
 import { useState } from "react/cjs/react.development";
-import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing, getLatestMovie} from "../api/movie-api";
+import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing} from "../api/movie-api";
 
 
 
@@ -51,9 +51,6 @@ const reducer = (state, action) => {
     case "load-now_playing":
         return {now_playing: action.payload.movies, movies: [...state.movies], upcoming: [...state.upcoming], popular: [...state.popular] };
 
-    case "load-latest":
-        return {latest: action.payload.movies, movies: [...state.movies], upcoming: [...state.upcoming], popular: [...state.popular], now_playing: [...state.now_playing] };
-
 
       case "add-watchListUpcoming":
         return {
@@ -67,19 +64,7 @@ const reducer = (state, action) => {
          
          
         };
-        case "add-watchLatest":
-          return {
-            latest: state.latest.map ((m) =>
-            m.id === action.payload.movie.id ? { ...m, watchList: true } : m
-            ),
-            
-            now_playing: [...state.now_playing],
-            movies: [...state.movies],
-            popular: [...state.popular],
-            upcoming: [...state.upcoming],
-           
-           
-          };
+        
 
         case "add-watchListNow_Playing":
         return {
@@ -145,11 +130,7 @@ const MoviesContextProvider = (props) => {
     dispatch({ type: "add-watchListNow_Playing", payload: { movie: state.now_playing[index] } });
   };
 
-  const addLatestToWatchList = (movieId) => {
-    const index = state.latest.map((m) => m.id).indexOf(movieId);
-    dispatch({ type: "add-watchLatest", payload: { movie: state.latest[index] } });
-  };
-
+ 
 
  
 
@@ -184,13 +165,7 @@ const MoviesContextProvider = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    getLatestMovie().then((movies) => {
-      dispatch({ type: "load-latest", payload: { movies } });
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+ 
 
 
 
@@ -201,14 +176,14 @@ const MoviesContextProvider = (props) => {
         upcoming: state.upcoming,
         popular: state.popular,
         now_playing: state.now_playing,
-        latest: state.latest,
+       
         
         
         addHomeToFavorites: addHomeToFavorites,
         addPopularToFavorites: addPopularToFavorites,
         addUpcomingToWatchList: addUpcomingToWatchList,
         addNowPlayingToWatchList: addNowPlayingToWatchList,
-        addLatestToWatchList: addLatestToWatchList,
+       
         addReview: addReview,
 
         setAuthenticated,
