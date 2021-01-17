@@ -1,4 +1,5 @@
 import React, { useEffect, createContext, useReducer } from "react";
+import { useState } from "react/cjs/react.development";
 import { getMovies, getUpcomingMovies, getPopularMovies, getNow_Playing, getLatestMovie} from "../api/movie-api";
 
 
@@ -66,6 +67,19 @@ const reducer = (state, action) => {
          
          
         };
+        case "add-watchLatest":
+          return {
+            latest: state.latest.map ((m) =>
+            m.id === action.payload.movie.id ? { ...m, watchList: true } : m
+            ),
+            
+            now_playing: [...state.now_playing],
+            movies: [...state.movies],
+            popular: [...state.popular],
+            upcoming: [...state.upcoming],
+           
+           
+          };
 
         case "add-watchListNow_Playing":
         return {
@@ -103,7 +117,7 @@ const reducer = (state, action) => {
 
 const MoviesContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, { movies: [], upcoming: [], popular:[], now_playing:[], translations:[] });
-
+  const[authenticated, setAuthenticated] = useState(false);
 
   const addHomeToFavorites = (movieId) => {
     const index = state.movies.map((m) => m.id).indexOf(movieId);
@@ -129,6 +143,11 @@ const MoviesContextProvider = (props) => {
   const addNowPlayingToWatchList = (movieId) => {
     const index = state.now_playing.map((m) => m.id).indexOf(movieId);
     dispatch({ type: "add-watchListNow_Playing", payload: { movie: state.now_playing[index] } });
+  };
+
+  const addLatestToWatchList = (movieId) => {
+    const index = state.latest.map((m) => m.id).indexOf(movieId);
+    dispatch({ type: "add-watchLatest", payload: { movie: state.latest[index] } });
   };
 
 
@@ -182,14 +201,17 @@ const MoviesContextProvider = (props) => {
         upcoming: state.upcoming,
         popular: state.popular,
         now_playing: state.now_playing,
+        latest: state.latest,
         
         
         addHomeToFavorites: addHomeToFavorites,
         addPopularToFavorites: addPopularToFavorites,
         addUpcomingToWatchList: addUpcomingToWatchList,
         addNowPlayingToWatchList: addNowPlayingToWatchList,
+        addLatestToWatchList: addLatestToWatchList,
         addReview: addReview,
-        
+
+        setAuthenticated,
       }}
     >
       {props.children}

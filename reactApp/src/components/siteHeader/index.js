@@ -7,18 +7,33 @@ import "./siteHeader.css";
 
 const SiteHeader = () => {
   return (
-    <nav className="navbar fixed-top navbar-light">
+    <nav className="navbar fixed-top navbar-expand">
       <nav className="navbar-brand text-white">
         <Link className=" text-white" to="/">
           TMDB Client
         </Link>
       </nav>
+
+      <nav className="navbar navbar-item">
+        <Link className=" text-white" to="/signup">
+          Sign Up
+        </Link>
+      </nav>
+      
+      <nav className="navbar navbar-item">
+        <Link className=" text-white" to="/login">
+          Login
+        </Link>
+      </nav>
+
+
+
       <FontAwesomeIcon
         className="navbar-text text-light"
         icon={["fas", "video"]}
         size="3x"
       />
-      <span className="navbar-text text-white">
+      <span className=" navbar navbar-text text-white">
         Get All Your Entertainment In One Place
       </span>
       <FontAwesomeIcon
@@ -26,6 +41,7 @@ const SiteHeader = () => {
         icon={["fas", "film"]}
         size="3x"
       />
+      
  
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
@@ -64,11 +80,11 @@ const SiteHeader = () => {
               Watchlist
             </Link>
           </li>
-        
           
         </ul>
       </nav>
     </nav>
+    
   );
 };
 

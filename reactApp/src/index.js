@@ -25,6 +25,8 @@ import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./sample/privateRoute";
 import AuthHeader from "./authHeader";
 import ProfilePage from "./pages/profilePage";
+import MovieDetailsPage from "./pages/movieDetailsPage";
+
 
 
 
@@ -35,6 +37,8 @@ const App = () => {
       <BrowserRouter>
         <div className="jumbotron">
             <AuthProvider>
+              <AuthHeader/>
+            
           <SiteHeader />     
           <div className="container-fluid">
           <MoviesContextProvider>
@@ -49,7 +53,7 @@ const App = () => {
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
         <Route path="/credits/:id" component={MovieCreditsPage} />
         <Route path="/reviews/:id" component={MovieReviewPage} />
-        
+        <Route path="/movies/:id" component={MovieDetailsPage} />
         
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignUpPage} />,
