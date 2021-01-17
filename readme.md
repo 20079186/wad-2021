@@ -1,6 +1,6 @@
 # Assignment 2 - Web API.
 
-Name: Your Name
+Name: Amie Abbotts
 
 ## Features.
 
@@ -14,18 +14,38 @@ Name: Your Name
 
 ## Installation Requirements
 
-Describe what needs to be on the machine to run the API (Node v?, NPM, MongoDB instance, any other 3rd party software not in the package.json). 
-
-Describe getting/installing the software, perhaps:
-
 ```bat
-git clone http:\myrepo.git
+git - git install
 ```
-
+```bat
+npm - npm install 
+```
+```bat
+Babel - npm install --save-dev babel-cli babel-preset-env nodemon eslint babel-eslint
+```
+```bat
+Nodemon - npm install --save-dev nodemon
+```
+```bat
+env - npm install --save dotenv express
+```
+```bat
+Node-Fetch - npm install -s node-fetch
+```
+```bat
+MongodDb - downloaded locally from https://www.mongodb.com/try/download/community
+```
+```bat
+Mongoose - npm install -save mongoose
+```
+Mongod instance running.
+```bat
+Express session - npm install --save express-session
+```
 followed by installation
 
 ```bat
-git install
+Passport - npm install --save passport passport-jwt jsonwebtoken bcrypt-nodejs
 ```
 
 ## API Configuration
@@ -35,10 +55,12 @@ REMEMBER: DON'T PUT YOUR OWN USERNAMES/PASSWORDS/AUTH KEYS IN THE README OR ON G
 ```bat
 NODE_ENV=development
 PORT=8080
-HOST=
-mongoDB=YourMongoURL
-seedDb=true
-secret=YourJWTSecret
+HOST=localhost
+TMDB_KEY="Your API key"
+mongoDB=movies_db
+MONGO_DB=movies_db
+SEED_DB=true
+SECRET="YourOwn"
 ```
 
 
@@ -47,16 +69,18 @@ Give an overview of your web API design, perhaps similar to the following:
 
 |  |  GET | POST | PUT | DELETE
 | -- | -- | -- | -- | -- 
-| /api/movies |Gets a list of movies | N/A | N/A |
-| /api/movies/{movieid} | Get a Movie | N/A | N/A | N/A
-| /api/movies/{movieid}/reviews | Get all reviews for movie | Create a new review for Movie | N/A | N/A  
-| ... | ... | ... | ... | ...
+| /api/movies |Gets a list of movies |  | N/A |
+| /api/movies/{movieid} | Gets movie by ID  | N/A| N/A | N/A
+| /api/movies/{movieid}/reviews | Get all reviews for movie | N/A| N/A | N/A  
+| /api/users | Gets users | N/A | N/A | N/A
 
 If you have your API design on an online platform or graphic, please link to it (e.g. [Swaggerhub](https://app.swaggerhub.com/)).
 
 
 ## Security and Authentication
 Give details of authentication/ security implemented on the API(e.g. passport/sessions). Indicate which routes are protected.
+A user will have to sign up or log in already if they are a returning user to view the movie pages. They will be asked to log in as they click on each page
+as they are through the private route. Passport authenticates users with the jsonwebtoken.
 
 ## Integrating with React App
 
@@ -69,17 +93,17 @@ export const getMovies = () => {
        'Authorization': window.localStorage.getItem('token')
     }
   }
-  )
-    .then(res => res.json())
-    .then(json => {return json.results;});
+  ).then(res => res.json());
 };
 
+
+export const getUpcomingMovies = () => {
+    return fetch(
+       '/api/upcoming',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+  };
+		// although not showing movies
 ~~~
-
-## Extra features
-
-. . Briefly explain any non-standard features, functional or non-functional, developed for the app.  
-
-## Independent learning.
-
-. . State the non-standard aspects of React/Express/Node (or other related technologies) that you researched and applied in this assignment . .  
