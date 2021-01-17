@@ -2,16 +2,6 @@
 
 Name: Amie Abbotts
 
-## Features.
-
-...... A bullet-point list of the ADDITIONAL features you have implemented in the API **THAT WERE NOT IN THE LABS** ......,
- 
- + Feature 1 - .... a statement of its purpose/objective ..... 
- + Feature 2 - .......
- + Feature 3 = ......
- + etc
- + etc
-
 ## Installation Requirements
 
 ```bat
@@ -96,7 +86,7 @@ export const getMovies = () => {
   ).then(res => res.json());
 };
 
-
+// not showing movies
 export const getUpcomingMovies = () => {
     return fetch(
        '/api/upcoming',{headers: {
@@ -105,5 +95,32 @@ export const getUpcomingMovies = () => {
     }
     ).then(res => res.json());
   };
-		// although not showing movies
+// not showing movies	
+ export const getPopularMovies = () => {
+    return fetch(
+       '/api/popular',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+
+  };
+  // not showing movies
+  export const getNow_Playing = () => {
+    return fetch(
+       '/api/nowPlaying',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+  };
+  //not showing 
+  export const getGenres = () => {
+    return fetch(
+       '/api/genres',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+  };
 ~~~
