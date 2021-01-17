@@ -101,7 +101,7 @@ const reducer = (state, action) => {
 };
 
 const MoviesContextProvider = (props) => {
-  const [state, dispatch] = useReducer(reducer, { movies: [], upcoming: [], popular:[], now_playing:[], translations:[] });
+  const [state, dispatch] = useReducer(reducer, { movies: [], upcoming: [], popular:[], now_playing:[] });
   const[authenticated, setAuthenticated] = useState(false);
 
   const addHomeToFavorites = (movieId) => {

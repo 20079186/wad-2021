@@ -7,6 +7,8 @@ import {loadUsers, loadMovies, loadPopularMovies, loadUpcomingMovies, loadNowPla
 import usersRouter from './api/users';
 import genresRouter from './api/genres';
 import upcomingRouter from './api/upcomingMovies';
+import nowPlayingRouter from './api/nowPlayingMovies';
+import popularRouter from './api/popularMovies';
 import session from 'express-session';
 import passport from './authenticate';
 
@@ -55,11 +57,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
+app.use('/api/movies/:id', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/genres', genresRouter);
-app.use('/api/nowPlayingMovies', moviesRouter);
-app.use('/api/popularMovies', moviesRouter);
-app.use('/api/upcoming', upcomingRouter);
+app.use('/api/nowPlayingMovies',  passport.authenticate('jwt', {session: false}), nowPlayingRouter);
+app.use('/api/popularMovies',  passport.authenticate('jwt', {session: false}), popularRouter);
+app.use('/api/upcoming', passport.authenticate('jwt', {session: false}), upcomingRouter);
 
 app.use(errHandler);
 app.listen(port, () => {

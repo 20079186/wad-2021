@@ -24,7 +24,6 @@ import SignUpPage from "./pages/signUpPage";
 import PrivateRoute from "./sample/privateRoute";
 import AuthHeader from "./authHeader";
 import ProfilePage from "./pages/profilePage";
-import MovieDetailsPage from "./pages/movieDetailsPage";
 
 
 
@@ -34,8 +33,9 @@ import MovieDetailsPage from "./pages/movieDetailsPage";
 const App = () => {
   return (
       <BrowserRouter>
+       <AuthProvider>
         <div className="jumbotron">
-            <AuthProvider>
+           
               <AuthHeader/>
             
           <SiteHeader />     
@@ -43,19 +43,19 @@ const App = () => {
           <MoviesContextProvider>
           <GenresContextProvider>
             <Switch>
-        <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-        <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-        <Route exact path="/movies/watchList" component={WatchListPage} />
-        <Route exact path="/movies/popular" component={PopularMoviesPage} />
-        <Route exact path="/movies/nowPlaying" component={NowPlayingPage} />
-        <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-        <Route path="/credits/:id" component={MovieCreditsPage} />
-        <Route path="/reviews/:id" component={MovieReviewPage} />
-        <Route path="/movies/:id" component={MovieDetailsPage} />
+        <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
+        <PrivateRoute exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+        <PrivateRoute exact path="/movies/watchList" component={WatchListPage} />
+        <PrivateRoute exact path="/movies/popular" component={PopularMoviesPage} />
+        <PrivateRoute exact path="/movies/nowPlaying" component={NowPlayingPage} />
+        <PrivateRoute exact path="/reviews/form" component={AddMovieReviewPage} />
+        <PrivateRoute path="/credits/:id" component={MovieCreditsPage} />
+        <PrivateRoute path="/reviews/:id" component={MovieReviewPage} />
+        
         
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignUpPage} />,
-          <Route exact path="/" component={HomePage} />
+          <PrivateRoute exact path="/" component={HomePage} />
           
           <PrivateRoute path="/profile" component={ProfilePage} />
          
@@ -66,8 +66,9 @@ const App = () => {
       </GenresContextProvider>    
       </MoviesContextProvider> 
     </div>
-    </AuthProvider>
+    
   </div>
+  </AuthProvider>
 </BrowserRouter>
 );
 };
