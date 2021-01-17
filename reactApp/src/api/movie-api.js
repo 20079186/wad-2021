@@ -51,6 +51,7 @@ export const getMovies = () => {
       }
     }
     ).then(res => res.json());
+
   };
   export const getNow_Playing = () => {
     return fetch(

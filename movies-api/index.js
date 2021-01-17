@@ -54,7 +54,7 @@ app.use(passport.initialize());
 app.use(express.static('public'));
 //configure body-parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded());
 
 app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
 app.use('/api/movies/:id', passport.authenticate('jwt', {session: false}), moviesRouter);
