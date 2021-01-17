@@ -1,407 +1,922 @@
-export const upcomingMovies = [
-    {
-        "adult": false,
-        "backdrop_path": "/eShw0LB5CkoEfYtpUcXPD85oz5Q.jpg",
-        "genre_ids": [
-          27,
-          53,
-          35,
-          14
-        ],
-        "id": 551804,
-        "original_language": "en",
-        "original_title": "Freaky",
-        "overview": "A mystical, ancient dagger causes a notorious serial killer to magically switch bodies with a 17-year-old girl.",
-        "popularity": 374.462,
-        "poster_path": "/8xC6QSyxrpm0D5A6iyHNemEWBVe.jpg",
-        "release_date": "2020-11-12",
-        "title": "Freaky",
-        "video": false,
-        "vote_average": 6.9,
-        "vote_count": 246
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/ckfwfLkl0CkafTasoRw5FILhZAS.jpg",
-        "genre_ids": [
-          28,
-          35,
-          14
-        ],
-        "id": 602211,
-        "original_language": "en",
-        "original_title": "Fatman",
-        "overview": "A rowdy, unorthodox Santa Claus is fighting to save his declining business. Meanwhile, Billy, a neglected and precocious 12 year old, hires a hit man to kill Santa after receiving a lump of coal in his stocking.",
-        "popularity": 929.156,
-        "poster_path": "/4n8QNNdk4BOX9Dslfbz5Dy6j1HK.jpg",
-        "release_date": "2020-11-13",
-        "title": "Fatman",
-        "video": false,
-        "vote_average": 5.8,
-        "vote_count": 263
-      },
-    {
-        "adult": false,
-        "backdrop_path": "/srYya1ZlI97Au4jUYAktDe3avyA.jpg",
-        "genre_ids": [
-          14,
-          28,
-          12
-        ],
-        "id": 464052,
-        "original_language": "en",
-        "original_title": "Wonder Woman 1984",
-        "overview": "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s and finds a formidable foe by the name of the Cheetah.",
-        "popularity": 4857.399,
-        "poster_path": "/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
-        "release_date": "2020-12-16",
-        "title": "Wonder Woman 1984",
-        "video": false,
-        "vote_average": 7.4,
-        "vote_count": 1419
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/cjaOSjsjV6cl3uXdJqimktT880L.jpg",
-        "genre_ids": [
-          12,
-          14,
-          10751,
-          16
-        ],
-        "id": 529203,
-        "original_language": "en",
-        "original_title": "The Croods: A New Age",
-        "overview": "After leaving their cave, the Croods encounter their biggest threat since leaving: another family called the Bettermans, who claim and show to be better and evolved. Grug grows suspicious of the Betterman parents, Phil and Hope,  as they secretly plan to break up his daughter Eep with her loving boyfriend Guy to ensure that their daughter Dawn has a loving and smart partner to protect her.  Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that's a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
-        "popularity": 2287.88,
-        "poster_path": "/tK1zy5BsCt1J4OzoDicXmr0UTFH.jpg",
-        "release_date": "2020-11-25",
-        "title": "The Croods: A New Age",
-        "video": false,
-        "vote_average": 7.8,
-        "vote_count": 766
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/kf456ZqeC45XTvo6W9pW5clYKfQ.jpg",
-        "genre_ids": [
-          16,
-          35,
-          18,
-          10402,
-          14
-        ],
-        "id": 508442,
-        "original_language": "en",
-        "original_title": "Soul",
-        "overview": "Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.",
-        "popularity": 1721.605,
-        "poster_path": "/zSuRX1VmT0PwuHVV7zl4n1mwdL0.jpg",
-        "release_date": "2020-12-25",
-        "title": "Soul",
-        "video": false,
-        "vote_average": 8.6,
-        "vote_count": 1548
-      },
-     
-      {
-        "adult": false,
-        "backdrop_path": "/wu1uilmhM4TdluKi2ytfz8gidHf.jpg",
-        "genre_ids": [
-          16,
-          14,
-          12,
-          35,
-          10751
-        ],
-        "id": 400160,
-        "original_language": "en",
-        "original_title": "The SpongeBob Movie: Sponge on the Run",
-        "overview": "When his best friend Gary is suddenly snatched away, SpongeBob takes Patrick on a madcap mission far beyond Bikini Bottom to save their pink-shelled pal.",
-        "popularity": 532.444,
-        "poster_path": "/jlJ8nDhMhCYJuzOw3f52CP1W8MW.jpg",
-        "release_date": "2020-08-14",
-        "title": "The SpongeBob Movie: Sponge on the Run",
-        "video": false,
-        "vote_average": 7.9,
-        "vote_count": 1777
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/shqLeIkqPAAXM8iT6wVDiXUYz1p.jpg",
-        "genre_ids": [
-          16,
-          10751
-        ],
-        "id": 12429,
-        "original_language": "ja",
-        "original_title": "崖の上のポニョ",
-        "overview": "The son of a sailor, 5-year old Sosuke lives a quiet life on an oceanside cliff with his mother Lisa. One fateful day, he finds a beautiful goldfish trapped in a bottle on the beach and upon rescuing her, names her Ponyo. But she is no ordinary goldfish. The daughter of a masterful wizard and a sea goddess, Ponyo uses her father's magic to transform herself into a young girl and quickly falls in love with Sosuke, but the use of such powerful sorcery causes a dangerous imbalance in the world. As the moon steadily draws nearer to the earth and Ponyo's father sends the ocean's mighty waves to find his daughter, the two children embark on an adventure of a lifetime to save the world and fulfill Ponyo's dreams of becoming human.",
-        "popularity": 85.545,
-        "poster_path": "/yp8vEZflGynlEylxEesbYasc06i.jpg",
-        "release_date": "2008-07-19",
-        "title": "Ponyo",
-        "video": false,
-        "vote_average": 7.7,
-        "vote_count": 2562
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/u9YEh2xVAPVTKoaMNlB5tH6pXkm.jpg",
-        "genre_ids": [
-          878,
-          18,
-          14,
-          53
-        ],
-        "id": 606234,
-        "original_language": "en",
-        "original_title": "Archive",
-        "overview": "2038: George Almore is working on a true human-equivalent AI, and his latest prototype is almost ready. This sensitive phase is also the riskiest as he has a goal that must be hidden at all costs—being reunited with his dead wife.",
-        "popularity": 117.386,
-        "poster_path": "/eDnHgozW8vfOaLHzfpHluf1GZCW.jpg",
-        "release_date": "2020-08-13",
-        "title": "Archive",
-        "video": false,
-        "vote_average": 5.9,
-        "vote_count": 237
-      },
-     
-      {
-        "adult": false,
-        "backdrop_path": "/gkvOmVXdukAwpG8LjTaHo2l2cWU.jpg",
-        "genre_ids": [
-          27,
-          9648
-        ],
-        "id": 571384,
-        "original_language": "en",
-        "original_title": "Come Play",
-        "overview": "A lonely young boy feels different from everyone else. Desperate for a friend, he seeks solace and refuge in his ever-present cell phone and tablet. When a mysterious creature uses the boy’s devices against him to break into our world, his parents must fight to save their son from the monster beyond the screen.",
-        "popularity": 264.625,
-        "poster_path": "/e98dJUitAoKLwmzjQ0Yxp1VQrnU.jpg",
-        "release_date": "2020-10-28",
-        "title": "Come Play",
-        "video": false,
-        "vote_average": 6.4,
-        "vote_count": 151
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/hnQJH9mVCARAam1ibrtvQdw0Fi9.jpg",
-        "genre_ids": [
-          18,
-          12,
-          10751
-        ],
-        "id": 657811,
-        "original_language": "de",
-        "original_title": "Lassie - Eine abenteuerliche Reise",
-        "overview": "Remake of 1943 movie based on Eric Knight's book, \"Lassie Come Home\"",
-        "popularity": 254.047,
-        "poster_path": "/82yxvnYtgeRzsq5f9USlrFJI05s.jpg",
-        "release_date": "2020-02-20",
-        "title": "Lassie Come Home",
-        "video": false,
-        "vote_average": 7.2,
-        "vote_count": 23
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/DpPoSYKlfcHUdOLQNdaUiF7liS.jpg",
-        "genre_ids": [
-          10749,
-          18
-        ],
-        "id": 568467,
-        "original_language": "en",
-        "original_title": "Ammonite",
-        "overview": "In 1840s England, palaeontologist Mary Anning and a young woman sent by her husband to convalesce by the sea develop an intense relationship. Despite the chasm between their social spheres and personalities, Mary and Charlotte discover they can each offer what the other has been searching for: the realisation that they are not alone. It is the beginning of a passionate and all-consuming love affair that will defy all social bounds and alter the course of both lives irrevocably.",
-        "popularity": 220.029,
-        "poster_path": "/5lx4pUHWZoOKJWsVsvurRRNW9FK.jpg",
-        "release_date": "2020-11-13",
-        "title": "Ammonite",
-        "video": false,
-        "vote_average": 7.3,
-        "vote_count": 81
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/tGxKtDoIPqWM4XYjHutqH2hn5ca.jpg",
-        "genre_ids": [
-          18,
-          10749
-        ],
-        "id": 628333,
-        "original_language": "en",
-        "original_title": "Wild Mountain Thyme",
-        "overview": "Headstrong farmer Rosemary Muldoon has her heart set on winning her neighbour Anthony Reilly's love. The problem is, Anthony seems to have inherited a family curse, and remains oblivious to his beautiful admirer. Stung by his father's plans to sell the family farm to his American nephew, Anthony is jolted into pursuing his dreams.",
-        "popularity": 278.208,
-        "poster_path": "/vMW81htT6Kki8x0G4UNb7l48iIr.jpg",
-        "release_date": "2020-12-11",
-        "title": "Wild Mountain Thyme",
-        "video": false,
-        "vote_average": 5.4,
-        "vote_count": 9
-      },
-     
-      {
-        "adult": false,
-        "backdrop_path": "/z8TvnEVRenMSTemxYZwLGqFofgF.jpg",
-        "genre_ids": [
-          14,
-          28,
-          12
-        ],
-        "id": 458576,
-        "original_language": "en",
-        "original_title": "Monster Hunter",
-        "overview": "A portal transports Lt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home.",
-        "popularity": 171.902,
-        "poster_path": "/zO9R7Z6DRDgRO9QVz4lAJg3L15o.jpg",
-        "release_date": "2020-12-03",
-        "title": "Monster Hunter",
-        "video": false,
-        "vote_average": 6,
-        "vote_count": 30
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/1BLx3PDYijbiSPbyozIZESel5Uu.jpg",
-        "genre_ids": [
-          53,
-          18
-        ],
-        "id": 480434,
-        "original_language": "en",
-        "original_title": "Dreamland",
-        "overview": "Amid the dust storms and economic depression of Dust Bowl Era Oklahoma, Eugene Evans finds his family farm on the brink of foreclosure. Discovering fugitive bank robber Allison Wells hiding in his small town, he is torn between claiming the bounty on her head and his growing attraction to the seductive criminal.",
-        "popularity": 171.625,
-        "poster_path": "/v8ax79K6TZEnMqSS5ePrNCnrK8R.jpg",
-        "release_date": "2020-11-13",
-        "title": "Dreamland",
-        "video": false,
-        "vote_average": 7,
-        "vote_count": 30
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/jOWgFmD1H5t6nL7ChbmX8oDFUZl.jpg",
-        "genre_ids": [
-          10749,
-          35
-        ],
-        "id": 520172,
-        "original_language": "en",
-        "original_title": "Happiest Season",
-        "overview": "A young woman's plans to propose to her girlfriend while at her family's annual holiday party are upended when she discovers her partner hasn't yet come out to her conservative parents.",
-        "popularity": 171.352,
-        "poster_path": "/vzec9kkOSE93tygyfOktedkeOQ.jpg",
-        "release_date": "2020-11-26",
-        "title": "Happiest Season",
-        "video": false,
-        "vote_average": 7.5,
-        "vote_count": 356
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/qBxvZJoM2EJBh2eRWSYTWKZVhcd.jpg",
-        "genre_ids": [
-          27,
-          9648
-        ],
-        "id": 595149,
-        "original_language": "en",
-        "original_title": "Death of Me",
-        "overview": "A couple on holiday on a remote South Pacific island awaken one morning with a hang over and no recollection of what transpired. When playing back a video of the previous night, they see they participated in a local ritual that somehow ends with him murdering her.",
-        "popularity": 157.673,
-        "poster_path": "/8F9xUvb1JMWUMkFV2Yq3aiueAbq.jpg",
-        "release_date": "2020-10-02",
-        "title": "Death of Me",
-        "video": false,
-        "vote_average": 5.2,
-        "vote_count": 59
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/j9uiJPliO5q6xeBO1Buaeqs2qr0.jpg",
-        "genre_ids": [
-          878,
-          18,
-          27
-        ],
-        "id": 594718,
-        "original_language": "ru",
-        "original_title": "Sputnik",
-        "overview": "At the height of the Cold War, a Soviet spacecraft crash lands after a mission gone awry, leaving the commander as its only survivor. After a renowned Russian psychologist is brought in to evaluate the commander’s mental state, it becomes clear that something dangerous may have come back to Earth with him…",
-        "popularity": 201.287,
-        "poster_path": "/eAUzmhP54bE1vPXaY7FbuZREJlR.jpg",
-        "release_date": "2020-09-08",
-        "title": "Sputnik",
-        "video": false,
-        "vote_average": 6.5,
-        "vote_count": 101
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/cSpwQ1BekQ6SL8JpUDmfsCBxJDz.jpg",
-        "genre_ids": [
-          18,
-          53,
-          80
-        ],
-        "id": 596161,
-        "original_language": "en",
-        "original_title": "Let Him Go",
-        "overview": "Following the loss of their son, a retired sheriff and his wife leave their Montana ranch to rescue their young grandson from the clutches of a dangerous family living off the grid in the Dakotas.",
-        "popularity": 136.108,
-        "poster_path": "/EsLZoT8oHhQlGd1QpdbnvnwTzO.jpg",
-        "release_date": "2020-11-05",
-        "title": "Let Him Go",
-        "video": false,
-        "vote_average": 6.8,
-        "vote_count": 63
-      },
-      {
-        "adult": false,
-        "backdrop_path": "/fX8e94MEWSuTJExndVYxKsmA4Hw.jpg",
-        "genre_ids": [
-          28,
-          12,
-          80
-        ],
-        "id": 604822,
-        "original_language": "zh",
-        "original_title": "急先锋",
-        "overview": "Covert security company Vanguard is the last hope of survival for an accountant after he is targeted by the world's deadliest mercenary organization.",
-        "popularity": 121.173,
-        "poster_path": "/vYvppZMvXYheYTWVd8Rnn9nsmNp.jpg",
-        "release_date": "2020-09-30",
-        "title": "Vanguard",
-        "video": false,
-        "vote_average": 7.5,
-        "vote_count": 94
-      },
-      
-      {
-        "adult": false,
-        "backdrop_path": "/nN4Gs3vZAOJ1D6FRtrwbU9VGYwU.jpg",
-        "genre_ids": [
-          16,
-          10749,
-          10751
-        ],
-        "id": 486589,
-        "original_language": "en",
-        "original_title": "Red Shoes and the Seven Dwarfs",
-        "overview": "Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy.",
-        "popularity": 92.788,
-        "poster_path": "/MBiKqTsouYqAACLYNDadsjhhC0.jpg",
-        "release_date": "2019-07-25",
-        "title": "Red Shoes and the Seven Dwarfs",
-        "video": false,
-        "vote_average": 7.5,
-        "vote_count": 515
-      },
-     
-      ];
+export const popular = [
+{
+    "adult": false,
+    "backdrop_path": "/ApiBzeaa95TNYliSbQ8pJv4Fje7.jpg",
+    "belongs_to_collection": null,
+    "budget": 11363000,
+    "genres": [
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "homepage": "https://www.parasite-movie.com/",
+    "id": 496243,
+    "imdb_id": "tt6751668",
+    "original_language": "ko",
+    "original_title": "기생충",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "popularity": 156.253,
+    "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "production_companies": [
+        {
+            "id": 4399,
+            "logo_path": "/7bWmbWfxFNSGTCjLHkHn3UjspZS.png",
+            "name": "Barunson E&A",
+            "origin_country": "KR"
+        },
+        {
+            "id": 7036,
+            "logo_path": "/javbyY0ZCvlFJtly3tpZqf2NwLX.png",
+            "name": "CJ Entertainment",
+            "origin_country": "KR"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "KR",
+            "name": "South Korea"
+        }
+    ],
+    "release_date": "2019-05-30",
+    "revenue": 257591776,
+    "runtime": 133,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "German",
+            "iso_639_1": "de",
+            "name": "Deutsch"
+        },
+        {
+            "english_name": "Korean",
+            "iso_639_1": "ko",
+            "name": "한국어/조선말"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Act like you own the place.",
+    "title": "Parasite",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 10321
+},
+{
+    "adult": false,
+    "backdrop_path": "/xMIyotorUv2Yz7zpQz2QYc8wkWB.jpg",
+    "belongs_to_collection": null,
+    "budget": 60000000,
+    "genres": [
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 80,
+            "name": "Crime"
+        }
+    ],
+    "homepage": "http://thegreenmile.warnerbros.com/",
+    "id": 497,
+    "imdb_id": "tt0120689",
+    "original_language": "en",
+    "original_title": "The Green Mile",
+    "overview": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.",
+    "popularity": 38.892,
+    "poster_path": "/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+    "production_companies": [
+        {
+            "id": 97,
+            "logo_path": "/7znWcbDd4PcJzJUlJxYqAlPPykp.png",
+            "name": "Castle Rock Entertainment",
+            "origin_country": "US"
+        },
+        {
+            "id": 3982,
+            "logo_path": "/bli7HkPOXOEWsDwDK0W7XXfeUU2.png",
+            "name": "Darkwoods Productions",
+            "origin_country": "US"
+        },
+        {
+            "id": 174,
+            "logo_path": "/ky0xOc5OrhzkZ1N6KyUxacfQsCk.png",
+            "name": "Warner Bros. Pictures",
+            "origin_country": "US"
+        },
+        {
+            "id": 33,
+            "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+            "name": "Universal Pictures",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "1999-12-10",
+    "revenue": 286801374,
+    "runtime": 189,
+    "spoken_languages": [
+        {
+            "english_name": "French",
+            "iso_639_1": "fr",
+            "name": "Français"
+        },
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Miracles do happen.",
+    "title": "The Green Mile",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 11561
+},
+{
+    "adult": false,
+    "backdrop_path": "/w7RDIgQM6bLT7JXtH4iUQd3Iwxm.jpg",
+    "belongs_to_collection": null,
+    "budget": 8000000,
+    "genres": [
+        {
+            "id": 53,
+            "name": "Thriller"
+        },
+        {
+            "id": 80,
+            "name": "Crime"
+        }
+    ],
+    "homepage": "",
+    "id": 680,
+    "imdb_id": "tt0110912",
+    "original_language": "en",
+    "original_title": "Pulp Fiction",
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "popularity": 112.099,
+    "poster_path": "/dRZpdpKLgN9nk57zggJCs1TjJb4.jpg",
+    "production_companies": [
+        {
+            "id": 14,
+            "logo_path": "/m6AHu84oZQxvq7n1rsvMNJIAsMu.png",
+            "name": "Miramax",
+            "origin_country": "US"
+        },
+        {
+            "id": 59,
+            "logo_path": "/yH7OMeSxhfP0AVM6iT0rsF3F4ZC.png",
+            "name": "A Band Apart",
+            "origin_country": "US"
+        },
+        {
+            "id": 216,
+            "logo_path": null,
+            "name": "Jersey Films",
+            "origin_country": ""
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "1994-09-10",
+    "revenue": 214179088,
+    "runtime": 154,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Español"
+        },
+        {
+            "english_name": "French",
+            "iso_639_1": "fr",
+            "name": "Français"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Just because you are a character doesn't mean you have character.",
+    "title": "Pulp Fiction",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 20301
+},
+{
+    "adult": false,
+    "backdrop_path": "/bx326cwBtDsfDcnTgFlK5dXkyaC.jpg",
+    "belongs_to_collection": null,
+    "budget": 0,
+    "genres": [
+        {
+            "id": 10402,
+            "name": "Music"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 10749,
+            "name": "Romance"
+        }
+    ],
+    "homepage": "",
+    "id": 630566,
+    "imdb_id": "tt6473066",
+    "original_language": "en",
+    "original_title": "Clouds",
+    "overview": "Young musician Zach Sobiech discovers his cancer has spread, leaving him just a few months to live. With limited time, he follows his dream and makes an album, unaware that it will soon be a viral music phenomenon.",
+    "popularity": 109.481,
+    "poster_path": "/2YvT3pdGngzpbAuxamTz4ZlabnT.jpg",
+    "production_companies": [
+        {
+            "id": 57408,
+            "logo_path": null,
+            "name": "Mad Chance Productions",
+            "origin_country": ""
+        },
+        {
+            "id": 174,
+            "logo_path": "/ky0xOc5OrhzkZ1N6KyUxacfQsCk.png",
+            "name": "Warner Bros. Pictures",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2020-10-09",
+    "revenue": 0,
+    "runtime": 121,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Don't wait for tomorrow to live for today",
+    "title": "Clouds",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 534
+},
+{
+    "adult": false,
+    "backdrop_path": "/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+    "belongs_to_collection": null,
+    "budget": 20000000,
+    "genres": [
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "homepage": "",
+    "id": 637,
+    "imdb_id": "tt0118799",
+    "original_language": "it",
+    "original_title": "La vita è bella",
+    "overview": "A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a game.",
+    "popularity": 28.434,
+    "poster_path": "/74hLDKjD5aGYOotO6esUVaeISa2.jpg",
+    "production_companies": [
+        {
+            "id": 370,
+            "logo_path": null,
+            "name": "Melampo Cinematografica",
+            "origin_country": "IT"
+        },
+        {
+            "id": 14,
+            "logo_path": "/m6AHu84oZQxvq7n1rsvMNJIAsMu.png",
+            "name": "Miramax",
+            "origin_country": "US"
+        },
+        {
+            "id": 113521,
+            "logo_path": "/fF4xLqMQ0C6Laql7HpzRnvn8hfi.png",
+            "name": "StudioCanal",
+            "origin_country": "GB"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "IT",
+            "name": "Italy"
+        }
+    ],
+    "release_date": "1997-12-20",
+    "revenue": 229400000,
+    "runtime": 116,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Czech",
+            "iso_639_1": "cs",
+            "name": "Český"
+        },
+        {
+            "english_name": "German",
+            "iso_639_1": "de",
+            "name": "Deutsch"
+        },
+        {
+            "english_name": "Italian",
+            "iso_639_1": "it",
+            "name": "Italiano"
+        }
+    ],
+    "status": "Released",
+    "tagline": "An unforgettable fable that proves love, family and imagination conquer all.",
+    "title": "Life Is Beautiful",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 9701
+},
+{
+    "adult": false,
+    "backdrop_path": "/lXhgCODAbBXL5buk9yEmTpOoOgR.jpg",
+    "belongs_to_collection": {
+        "id": 119,
+        "name": "The Lord of the Rings Collection",
+        "poster_path": "/p4UokEk2XnjjRTdXGe6DLYXlbI1.jpg",
+        "backdrop_path": "/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg"
+    },
+    "budget": 94000000,
+    "genres": [
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        }
+    ],
+    "homepage": "http://www.lordoftherings.net",
+    "id": 122,
+    "imdb_id": "tt0167260",
+    "original_language": "en",
+    "original_title": "The Lord of the Rings: The Return of the King",
+    "overview": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm.",
+    "popularity": 76.032,
+    "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "production_companies": [
+        {
+            "id": 12,
+            "logo_path": "/iaYpEp3LQmb8AfAtmTvpqd4149c.png",
+            "name": "New Line Cinema",
+            "origin_country": "US"
+        },
+        {
+            "id": 11,
+            "logo_path": "/6FAuASQHybRkZUk08p9PzSs9ezM.png",
+            "name": "WingNut Films",
+            "origin_country": "NZ"
+        },
+        {
+            "id": 5237,
+            "logo_path": null,
+            "name": "The Saul Zaentz Company",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "NZ",
+            "name": "New Zealand"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2003-12-01",
+    "revenue": 1118888979,
+    "runtime": 201,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "The eye of the enemy is moving.",
+    "title": "The Lord of the Rings: The Return of the King",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 16933
+},
+{
+    "adult": false,
+    "backdrop_path": "/tlEFuIlaxRPXIYVHXbOSAMCfWqk.jpg",
+    "belongs_to_collection": null,
+    "budget": 55000000,
+    "genres": [
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 10749,
+            "name": "Romance"
+        }
+    ],
+    "homepage": "",
+    "id": 13,
+    "imdb_id": "tt0109830",
+    "original_language": "en",
+    "original_title": "Forrest Gump",
+    "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+    "popularity": 51.583,
+    "poster_path": "/h5J4W4veyxMXDMjeNxZI46TsHOb.jpg",
+    "production_companies": [
+        {
+            "id": 4,
+            "logo_path": "/fycMZt242LVjagMByZOLUGbCvv3.png",
+            "name": "Paramount",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "1994-07-06",
+    "revenue": 677387716,
+    "runtime": 142,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Life is like a box of chocolates...you never know what you're gonna get.",
+    "title": "Forrest Gump",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 19691
+},
+{
+    "adult": false,
+    "backdrop_path": "/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
+    "belongs_to_collection": {
+        "id": 230,
+        "name": "The Godfather Collection",
+        "poster_path": "/9Baumh5J9N1nJUYzNkm0xsgjpwY.jpg",
+        "backdrop_path": "/3WZTxpgscsmoUk81TuECXdFOD0R.jpg"
+    },
+    "budget": 6000000,
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 80,
+            "name": "Crime"
+        }
+    ],
+    "homepage": "http://www.thegodfather.com/",
+    "id": 238,
+    "imdb_id": "tt0068646",
+    "original_language": "en",
+    "original_title": "The Godfather",
+    "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+    "popularity": 64.143,
+    "poster_path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "production_companies": [
+        {
+            "id": 4,
+            "logo_path": "/fycMZt242LVjagMByZOLUGbCvv3.png",
+            "name": "Paramount",
+            "origin_country": "US"
+        },
+        {
+            "id": 10211,
+            "logo_path": null,
+            "name": "Alfran Productions",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "1972-03-14",
+    "revenue": 245066411,
+    "runtime": 175,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Italian",
+            "iso_639_1": "it",
+            "name": "Italiano"
+        },
+        {
+            "english_name": "Latin",
+            "iso_639_1": "la",
+            "name": "Latin"
+        }
+    ],
+    "status": "Released",
+    "tagline": "An offer you can't refuse.",
+    "title": "The Godfather",
+    "video": false,
+    "vote_average": 8.7,
+    "vote_count": 13581
+},
+{
+    "adult": false,
+    "backdrop_path": "/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
+    "belongs_to_collection": null,
+    "budget": 22000000,
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 36,
+            "name": "History"
+        },
+        {
+            "id": 10752,
+            "name": "War"
+        }
+    ],
+    "homepage": "http://www.schindlerslist.com/",
+    "id": 424,
+    "imdb_id": "tt0108052",
+    "original_language": "en",
+    "original_title": "Schindler's List",
+    "overview": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+    "popularity": 37.953,
+    "poster_path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+    "production_companies": [
+        {
+            "id": 33,
+            "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+            "name": "Universal Pictures",
+            "origin_country": "US"
+        },
+        {
+            "id": 56,
+            "logo_path": "/cEaxANEisCqeEoRvODv2dO1I0iI.png",
+            "name": "Amblin Entertainment",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "1993-11-30",
+    "revenue": 321365567,
+    "runtime": 195,
+    "spoken_languages": [
+        {
+            "english_name": "German",
+            "iso_639_1": "de",
+            "name": "Deutsch"
+        },
+        {
+            "english_name": "Polish",
+            "iso_639_1": "pl",
+            "name": "Polski"
+        },
+        {
+            "english_name": "Hebrew",
+            "iso_639_1": "he",
+            "name": "עִבְרִית"
+        },
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Whoever saves one life, saves the world entire.",
+    "title": "Schindler's List",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 10825
+},
+{
+    "adult": false,
+    "backdrop_path": "/dIWwZW7dJJtqC6CgWzYkNVKIUm8.jpg",
+    "belongs_to_collection": null,
+    "budget": 0,
+    "genres": [
+        {
+            "id": 10749,
+            "name": "Romance"
+        },
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "homepage": "https://www.funimationfilms.com/movie/yourname/",
+    "id": 372058,
+    "imdb_id": "tt5311514",
+    "original_language": "ja",
+    "original_title": "君の名は。",
+    "overview": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.",
+    "popularity": 138.758,
+    "poster_path": "/q719jXXEzOoYaps6babgKnONONX.jpg",
+    "production_companies": [
+        {
+            "id": 3756,
+            "logo_path": "/dH51ZYZnD7ezWMqZCItuvATr2j8.png",
+            "name": "CoMix Wave Films",
+            "origin_country": "JP"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "JP",
+            "name": "Japan"
+        }
+    ],
+    "release_date": "2016-08-26",
+    "revenue": 357986087,
+    "runtime": 106,
+    "spoken_languages": [
+        {
+            "english_name": "Japanese",
+            "iso_639_1": "ja",
+            "name": "日本語"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Your Name.",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 6908
+},
+{
+    "adult": false,
+    "backdrop_path": "/poec6RqOKY9iSiIUmfyfPfiLtvB.jpg",
+    "belongs_to_collection": {
+        "id": 230,
+        "name": "The Godfather Collection",
+        "poster_path": "/9Baumh5J9N1nJUYzNkm0xsgjpwY.jpg",
+        "backdrop_path": "/3WZTxpgscsmoUk81TuECXdFOD0R.jpg"
+    },
+    "budget": 13000000,
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 80,
+            "name": "Crime"
+        }
+    ],
+    "homepage": "",
+    "id": 240,
+    "imdb_id": "tt0071562",
+    "original_language": "en",
+    "original_title": "The Godfather: Part II",
+    "overview": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+    "popularity": 53.959,
+    "poster_path": "/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+    "production_companies": [
+        {
+            "id": 4,
+            "logo_path": "/fycMZt242LVjagMByZOLUGbCvv3.png",
+            "name": "Paramount",
+            "origin_country": "US"
+        },
+        {
+            "id": 536,
+            "logo_path": null,
+            "name": "The Coppola Company",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "1974-12-20",
+    "revenue": 102600000,
+    "runtime": 202,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Italian",
+            "iso_639_1": "it",
+            "name": "Italiano"
+        },
+        {
+            "english_name": "Latin",
+            "iso_639_1": "la",
+            "name": "Latin"
+        },
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Español"
+        }
+    ],
+    "status": "Released",
+    "tagline": "I don't feel I have to wipe everybody out, Tom. Just my enemies.",
+    "title": "The Godfather: Part II",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 8097
+},
+{
+    "adult": false,
+    "backdrop_path": "/yR27bZPIkNhpGEIP3jKV2EifTgo.jpg",
+    "belongs_to_collection": null,
+    "budget": 0,
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 10751,
+            "name": "Family"
+        }
+    ],
+    "homepage": "",
+    "id": 755812,
+    "imdb_id": "tt12816348",
+    "original_language": "fr",
+    "original_title": "Miraculous World: New York, United HeroeZ",
+    "overview": "During a school field trip, Ladybug and Cat Noir meet the American superheroes, whom they have to save from an akumatised super-villain. They discover that Miraculous exist in the United States too.",
+    "popularity": 1687.584,
+    "poster_path": "/50AlM1eAqXHEG8Z5lzrTbWyiew9.jpg",
+    "production_companies": [],
+    "production_countries": [],
+    "release_date": "2020-10-10",
+    "revenue": 0,
+    "runtime": 0,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "French",
+            "iso_639_1": "fr",
+            "name": "Français"
+        }
+    ],
+    "status": "Released",
+    "tagline": "NEW CITY. SAME DUTY.",
+    "title": "Miraculous World: New York, United HeroeZ",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 274
+},
+{
+    "adult": false,
+    "backdrop_path": "/8g1rUabKleLvovt0Sx6bXgWfC42.jpg",
+    "belongs_to_collection": null,
+    "budget": 0,
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        }
+    ],
+    "homepage": "",
+    "id": 644479,
+    "imdb_id": "tt5869370",
+    "original_language": "es",
+    "original_title": "Dedicada a mi ex",
+    "overview": "The film tells the story of Ariel, a 21-year-old who decides to form a rock band to compete for a prize of ten thousand dollars in a musical band contest, this as a last option when trying to get money to save their relationship and reunite with his ex-girlfriend, which breaks due to the trip she must make to Finland for an internship. Ariel with her friend Ortega, decides to make a casting to find the other members of the band, although they do not know nothing about music, thus forming a band with members that have diverse and opposite personalities.",
+    "popularity": 11.702,
+    "poster_path": "/riAooJrFvVhotyaOgoI0WR7okSe.jpg",
+    "production_companies": [
+        {
+            "id": 78456,
+            "logo_path": null,
+            "name": "Touché Films",
+            "origin_country": ""
+        },
+        {
+            "id": 7062,
+            "logo_path": "/lyjwhVUoPpfBy87TbPpoMTsULHx.png",
+            "name": "Dynamo",
+            "origin_country": "CO"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "CO",
+            "name": "Colombia"
+        },
+        {
+            "iso_3166_1": "EC",
+            "name": "Ecuador"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2019-11-01",
+    "revenue": 0,
+    "runtime": 94,
+    "spoken_languages": [
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Español"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Dedicated to my ex",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 281
+},
+];

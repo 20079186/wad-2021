@@ -6,6 +6,7 @@ import './db';
 import {loadUsers, loadMovies, loadPopularMovies, loadUpcomingMovies, loadNowPlayingMovies, loadGenres} from './seedData';
 import usersRouter from './api/users';
 import genresRouter from './api/genres';
+import upcomingRouter from './api/upcomingMovies';
 import session from 'express-session';
 import passport from './authenticate';
 
@@ -58,7 +59,7 @@ app.use('/api/users', usersRouter);
 app.use('/api/genres', genresRouter);
 app.use('/api/nowPlayingMovies', moviesRouter);
 app.use('/api/popularMovies', moviesRouter);
-app.use('/api/upcoming', moviesRouter);
+app.use('/api/upcoming', upcomingRouter);
 
 app.use(errHandler);
 app.listen(port, () => {

@@ -1,5 +1,5 @@
 import express from 'express';
-import { genres } from '../../seedData/genres';
+import {genres} from '../../seedData/genres';
 import genresModel from './genresModel';
 
 const router = express.Router();
