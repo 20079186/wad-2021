@@ -1,6 +1,6 @@
 import express from 'express';
 import { popular } from '../../seedData/popularMovies';
-import movieModel from '../movies/movieModel';
+import popularMoviesModel from '../movies/movieModel';
 
 
 const router = express.Router();
